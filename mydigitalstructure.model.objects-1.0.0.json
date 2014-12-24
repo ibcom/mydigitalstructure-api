@@ -24,14 +24,14 @@
 			"notes": ""
 		},
 		{
-			"name": "contact-person",
+			"name": "contact_person",
 			"id": "32",
 			"title": "Person Contacts",
 			"type": "3",
 			"notes": ""
 		},
 		{
-			"name": "contact-business",
+			"name": "contact_business",
 			"id": "12",
 			"title": "Business Contacts",
 			"type": "3",
@@ -53,7 +53,7 @@
 			"dependants": ["11", "265"]
 		},
 		{
-			"name": "project-task",
+			"name": "project_task",
 			"id": "11",
 			"title": "Project Tasks",
 			"type": "4",
@@ -61,28 +61,30 @@
 			"dependants": ["263", "264"]
 		},
 		{
-			"name": "project-task-status",
+			"name": "project_task_status",
 			"id": "263",
 			"title": "Project Task Status",
 			"type": "4",
+			"parent": "project",
 			"notes": ""
 		},
 		{
-			"name": "project-task-type",
+			"name": "project_task_type",
 			"id": "264",
 			"title": "Project Task Type",
 			"type": "4",
 			"notes": ""
 		},
 		{
-			"name": "project-team",
+			"name": "project_team",
 			"id": "265",
 			"title": "Project Team",
 			"type": "4",
+			"rels": [{"parent": "project"}],
 			"notes": ""
 		},
 		{
-			"name": "project-type",
+			"name": "project_type",
 			"id": "266",
 			"title": "Project Type",
 			"type": "4",
