@@ -6,14 +6,17 @@
 			"id": "22",
 			"title": "Users",
 			"type": "1",
-			"notes": "",
-			"rpc": "SETUP_USER"
+			"rpc": "/rpc/setup/?method=SETUP_USER_[SEARCH,MANAGE]",
+			"rest": "/rest/setup_user/",
+			"notes": ""
 		},
 		{
 			"name": "action",
 			"id": "17",
 			"title": "Actions",
 			"type": "2",
+			"rpc": "/rpc/action/?method=ACTION_[SEARCH,MANAGE]",
+			"rest": "/rest/action/",
 			"notes": ""
 		},
 		{
@@ -21,6 +24,8 @@
 			"id": "327",
 			"title": "Attachments",
 			"type": "2",
+			"rpc": "/rpc/core/?method=CORE_ATTACHMENT_[SEARCH,MANAGE]",
+			"rest": "/rest/core_attachment/",
 			"notes": ""
 		},
 		{
@@ -28,6 +33,8 @@
 			"id": "32",
 			"title": "Person Contacts",
 			"type": "3",
+			"rpc": "/rpc/contact/?method=CONTACT_PERSON_[SEARCH,MANAGE]",
+			"rest": "/rest/contact_person/",
 			"notes": ""
 		},
 		{
@@ -35,6 +42,8 @@
 			"id": "12",
 			"title": "Business Contacts",
 			"type": "3",
+			"rpc": "/rpc/contact/?method=CONTACT_BUSINESS_[SEARCH,MANAGE]",
+			"rest": "/rest/contact_business/",
 			"notes": ""
 		},
 		{
@@ -42,6 +51,8 @@
 			"id": "35",
 			"title": "Opportunities",
 			"type": "3",
+			"rpc": "/rpc/opportunity/?method=OPPORTUNITY_[SEARCH,MANAGE]",
+			"rest": "/rest/opportunity/",
 			"notes": ""
 		},
 		{
@@ -49,23 +60,29 @@
 			"id": "1",
 			"title": "Projects",
 			"type": "3",
-			"notes": "",
-			"dependants": ["11", "265"]
+			"rpc": "/rpc/project/?method=PROJECT_[SEARCH,MANAGE]",
+			"rest": "/rest/project/",
+			"notes": ""
 		},
 		{
 			"name": "project_task",
 			"id": "11",
 			"title": "Project Tasks",
 			"type": "4",
-			"notes": "",
-			"dependants": ["263", "264"]
+			"rels": [{"parent": "project"}],
+			"rpc": "/rpc/project/?method=PROJECT_TASK_[SEARCH,MANAGE]",
+			"rest": "/rest/project_task/",
+			"notes": ""
+			
 		},
 		{
 			"name": "project_task_status",
 			"id": "263",
 			"title": "Project Task Status",
 			"type": "4",
-			"parent": "project",
+			"rels": [{"parent": "project_task"}],
+			"rpc": "/rpc/project/?method=PROJECT_TASK_STATUS_[SEARCH,MANAGE]",
+			"rest": "/rest/project_task_status/",
 			"notes": ""
 		},
 		{
@@ -73,6 +90,9 @@
 			"id": "264",
 			"title": "Project Task Type",
 			"type": "4",
+			"rels": [{"parent": "project_task"}],
+			"rpc": "/rpc/project/?method=PROJECT_TASK_TYPE_[SEARCH,MANAGE]",
+			"rest": "/rest/project_task_type/",
 			"notes": ""
 		},
 		{
@@ -81,13 +101,18 @@
 			"title": "Project Team",
 			"type": "4",
 			"rels": [{"parent": "project"}],
+			"rpc": "/rpc/project/?method=PROJECT_TEAM_[SEARCH,MANAGE]",
+			"rest": "/rest/project_team/",
 			"notes": ""
 		},
 		{
 			"name": "project_type",
 			"id": "266",
 			"title": "Project Type",
-			"type": "4",
+			"type": "3",
+			"rels": [{"parent": "project"}],
+			"rpc": "/rpc/project/?method=PROJECT_TYPE_[SEARCH,MANAGE]",
+			"rest": "/rest/project_type/",
 			"notes": ""
 		},
 		{
@@ -95,6 +120,8 @@
 			"id": "19",
 			"title": "Mews",
 			"type": "3",
+			"rpc": "/rpc/news/?method=NEWS_[SEARCH,MANAGE]",
+			"rest": "/rest/news/",
 			"notes": ""
 		},
 		{
@@ -102,6 +129,8 @@
 			"id": "39",
 			"title": "Events",
 			"type": "3",
+			"rpc": "/rpc/event/?method=EVENT_[SEARCH,MANAGE]",
+			"rest": "/rest/event/",
 			"notes": ""
 		},
 		{
@@ -109,13 +138,17 @@
 			"id": "16",
 			"title": "Products",
 			"type": "3",
+			"rpc": "/rpc/event/?method=EVENT_[SEARCH,MANAGE]",
+			"rest": "/rest/event/",
 			"notes": ""
 		},
 		{
 			"name": "order",
-			"id": "43",
+			"id": "42",
 			"title": "Orders",
 			"type": "3",
+			"rpc": "/rpc/order/?method=ORDER_[SEARCH,MANAGE]",
+			"rest": "/rest/order/",
 			"notes": ""
 		},
 		{
@@ -123,13 +156,17 @@
 			"id": "5",
 			"title": "Invoices",
 			"type": "3",
+			"rpc": "/rpc/invoice/?method=INVOICE_[SEARCH,MANAGE]",
+			"rest": "/rest/invoice/",
 			"notes": ""
 		},
 		{
 			"name": "expense",
 			"id": "2",
-			"title": "Invoices",
+			"title": "Expenses",
 			"type": "3",
+			"rpc": "/rpc/expense/?method=EXPENSE_[SEARCH,MANAGE]",
+			"rest": "/rest/expense/",
 			"notes": ""
 		},
 		{
@@ -137,6 +174,8 @@
 			"id": "6",
 			"title": "Receipts",
 			"type": "3",
+			"rpc": "/rpc/receipt/?method=RECEIPT_[SEARCH,MANAGE]",
+			"rest": "/rest/receipt/",
 			"notes": ""
 		},
 		{
@@ -144,6 +183,54 @@
 			"id": "3",
 			"title": "Payments",
 			"type": "3",
+			"rpc": "/rpc/payment/?method=PAYMENT_[SEARCH,MANAGE]",
+			"rest": "/rest/payment/",
+			"notes": ""
+		},
+		{
+			"name": "financial_item",
+			"id": "3",
+			"title": "Financial Item",
+			"type": "3",
+			"rels": [{"parent": "invoice"}, {"parent": "expense"}, {"parent": "receipt"}, {"parent": "payment"}],
+			"rpc": "/rpc/invoice/?method=FINANCIAL_ITEM_[SEARCH,MANAGE,LOCK,COMPLETE]",
+			"rest": "/rest/financial_item/",
+			"notes": ""
+		},
+		{
+			"name": "document",
+			"id": "14",
+			"title": "Documents",
+			"type": "3",
+			"rpc": "/rpc/document/?method=DOCUMENT_[SEARCH,MANAGE]",
+			"rest": "/rest/document/",
+			"notes": ""
+		},
+		{
+			"name": "document",
+			"id": "14",
+			"title": "Documents",
+			"type": "3",
+			"rpc": "/rpc/document/?method=DOCUMENT_[SEARCH,MANAGE]",
+			"rest": "/rest/document/",
+			"notes": ""
+		},
+		{
+			"name": "space",
+			"id": "24",
+			"title": "Space Profile",
+			"type": "1",
+			"rpc": "/rpc/setup/?method=SETUP_SPACE_[SEARCH,MANAGE]",
+			"rest": "/rest/setup_space/",
+			"notes": ""
+		},
+		{
+			"name": "import_file",
+			"id": "29",
+			"title": "Imported File",
+			"type": "1",
+			"rpc": "/rpc/core/?method=CORE_IMPORT_FILE_[SEARCH,MANAGE]",
+			"rest": "/rest/import_file/",
 			"notes": ""
 		}
 	],
@@ -153,8 +240,7 @@
 		{
 			"1": "System",
 			"2": "Core",
-			"3": "Primary",
-			"4": "Secondary"
+			"3": "Space"
 		}
 	}
 }

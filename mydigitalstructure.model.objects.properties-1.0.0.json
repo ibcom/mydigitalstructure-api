@@ -1,0 +1,60 @@
+{
+	"objects":
+	[
+		{
+			"name": "user",
+			"properties":
+			[
+				{
+					"name": "username",
+					"type": "text",
+					"length": ""
+				}	
+			]
+		},
+		{
+			"name": "action",
+			"properties":
+			[
+				{
+					"name": "username",
+					"type": "text",
+					"length": ""
+				}	
+			]
+		},
+		{
+			"name": "attachment",
+			"properties":
+			[
+				{
+					"name": "username",
+					"type": "text",
+					"length": ""
+				}	
+			]
+		},
+		{
+			"name": "contact_person",
+			"properties":
+			[
+				{
+					"name": "firstname",
+					"type": "text",
+					"length": ""
+				}	
+			]
+		},
+		{
+			"name": "contact_business",
+			"properties":
+			[
+				{
+					"name": "tradename",
+					"type": "text",
+					"length": ""
+				}	
+			]
+		}
+	]
+}
