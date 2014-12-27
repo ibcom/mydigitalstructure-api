@@ -1,0 +1,14 @@
+{
+	"model":
+	{
+		"objects":
+		{
+			"uri": "/jscripts/mydigitalstructure.model.objects-1.0.0.json"
+		},
+
+		"properties":
+		{
+			"uri": "/jscripts/mydigitalstructure.model.objects.properties-1.0.0.json"
+		}
+	}
+}
