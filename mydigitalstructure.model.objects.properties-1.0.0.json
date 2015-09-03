@@ -17,7 +17,7 @@
 			"properties":
 			[
 				{
-					"name": "username",
+					"name": "title",
 					"type": "text",
 					"length": ""
 				}	
@@ -28,7 +28,7 @@
 			"properties":
 			[
 				{
-					"name": "username",
+					"name": "filename",
 					"type": "text",
 					"length": ""
 				}	
